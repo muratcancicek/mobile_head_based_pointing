@@ -2,7 +2,7 @@
 
 An experimental Android App module that provides an advanced head-based pointing on mobile devices. At this stage, the repo only demonstrates the implementation of an head-based pointing algorithm designed for and evaluated with users with motor impairments rather than proposing a well-packaged extension for third-party usage. The design and evaluation process will be published as a technical paper in [The 22nd International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS2020)](https://assets20.sigaccess.org/). 
 
-Future work will focus to wrap the algorithm into a package that is going to be integrated with Flutter's default UI components and ready for third-party usage as an extension.
+Future work will focus to wrap the algorithm into a package that is going to be integrated with Flutter's default UI components and ready for third-party usage as an extension. Towards this direction, we would appreciate any contribution from Flutter community in the spirit of open-source development
 
 ## Head-based Pointing
 
