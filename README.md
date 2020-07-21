@@ -1,20 +1,12 @@
-# Head-based Pointing with Flutter
+# Head-based Pointing on Smartphones for People with Motor Impairments
 
-An experimental Flutter App that provides head-based pointing on mobile devices.
+An experimental Android App module that provides an advanced head-based pointing on mobile devices. At this stage, the repo only demonstrates the implementation of an head-based pointing algorithm designed for and evaluated with users with motor impairments rather than proposing a well-packaged extension for third-party usage. The design and evaluation process will be published as a technical paper in [The 22nd International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS2020)](https://assets20.sigaccess.org/). 
 
-## Head-based Pointing with Firebase ML Kit
-The current version of the Flutter App is highly inspired by @giandifra's [Flutter Smile To Face Detection](https://github.com/giandifra/Flutter-Smile-Face-Detection) and used his Dart code as a starting point. But, after the initialization of the base code, this App here paints the 10 landmarks, enables tracking and adds a virtual cursor (in red). All these functionalities required rewriting most of the original code. For this reason, I preferred to start a new repository instead of forking @giandifra's one.
+Future work will focus to wrap the algorithm into a package that is going to be integrated with Flutter's default UI components and ready for third-party usage as an extension.
 
-### Firebase ML Vision
-For now, the App relies on Firebase Vision models to complete the following tasks:
+## Head-based Pointing
 
-* **Face Detection:** Firebase implicitly calls *tflite* and runs a single shot multi-box face detector model which is sufficiently fast and quite precise.
-* **Face Tracking:** The same model also provides a *FaceID* for each face detection on the frame. This allows to track the same face through iterations.
-* **Landmark Detection:** It also detects facial landmarks within the bounding box detection. While the standard landmark detectors provide over 68 or 144 landmarks on the face, this reduced model only provides 10 facial landmarks. It is quite reasonable for mobile applications and in head-based pointing, we need even fewer landmarks to build a stable mapping between the face and the cursor.
-
-### Head-based Pointing
-
-As you may see below, the App demonstrates a dummy cursor with a red circle which is being pointed by the user's head movements measured by the facial landmarks as marked with yellow dots.
+As you may see below, the App demonstrates a dummy cursor with a red circle which is being pointed by the user's head movements measured by the facial landmarks as marked with yellow dots. 
 
 ![Example](https://media.giphy.com/media/dWkvkSoEfdBIIE2maI/giphy.gif)
 
